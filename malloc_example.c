@@ -38,6 +38,9 @@ int main()
    //测试专用2
    printf("A = %s,  B = %u\n", str, str);
 
+   //dev分支
+   printf("A = %s,  B = %u\n", str, str);
+
 
  
    free(str);                  //释放堆区内存 
