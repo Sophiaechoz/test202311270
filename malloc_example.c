@@ -35,7 +35,8 @@ int main()
    //测试专用
    printf("A = %s,  B = %u\n", str, str);
 
-
+   //测试专用2
+   printf("A = %s,  B = %u\n", str, str);
 
 
  
