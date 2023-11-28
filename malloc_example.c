@@ -1,22 +1,22 @@
-#include <stdio.h>     //ÊäÈëÊä³ö´òÓ¡¿â 
-#include <string.h>    //×Ö·û´®¿â 
-#include <stdlib.h>    //±ê×¼¿â 
+#include <stdio.h>     //è¾“å…¥è¾“å‡ºæ‰“å°åº“ 
+#include <string.h>    //å­—ç¬¦ä¸²åº“ 
+#include <stdlib.h>    //æ ‡å‡†åº“ 
  
 int main()
 {
-   char *str;    //¶¨ÒåÒ»¸öÖ¸Õë
+   char *str;    //å®šä¹‰ä¸€ä¸ªæŒ‡é’ˆ
  
-   /* ×î³õµÄÄÚ´æ·ÖÅä */
-   str = (char *) malloc(15);   //Îª¸ÃÖ¸Õë·ÖÅäÄÚ´æ 
-   strcpy(str, "runoob");       //Í¨¹ı×Ö·û´®¿½±´º¯Êı½«Êı¾İ¿½±´µ½ÏàÓ¦µÄÖ¸ÕëÖĞ 
+   /* æœ€åˆçš„å†…å­˜åˆ†é… */
+   str = (char *) malloc(15);   //ä¸ºè¯¥æŒ‡é’ˆåˆ†é…å†…å­˜ 
+   strcpy(str, "runoob");       //é€šè¿‡å­—ç¬¦ä¸²æ‹·è´å‡½æ•°å°†æ•°æ®æ‹·è´åˆ°ç›¸åº”çš„æŒ‡é’ˆä¸­ 
    printf("String = %s,  Address = %u\n", str, str);
    printf("String = %s,  Address = %u\n", str, str);
    printf("String = %s,  Address = %u\n", str, str);
-   /* ÖØĞÂ·ÖÅäÄÚ´æ */
+   /* é‡æ–°åˆ†é…å†…å­˜ */
    str = (char *) realloc(str, 25);
    strcat(str, ".com");
    printf("String = %s,  Address = %u\n", str, str);
-   /*²âÊÔ×¨ÓÃ*/
+   /*æµ‹è¯•ä¸“ç”¨*/
    //C1
    printf("String = %s,  Address = %u\n", str, str);
    //C2
@@ -24,26 +24,25 @@ int main()
    //C3
    printf("String = %s,  Address = %u\n", str, str);
 
-   //bug  C3µÄBUG
+   //bug  C3çš„BUG
    printf("String1111 = %s,  Address1111 = %u\n", str, str);
 
-   //dev ¡°ÉÌ³Ç¡±
+   //dev â€œå•†åŸâ€
    printf("String = %s,  Address = %u\n", str, str);
    printf("String = %s,  Address = %u\n", str, str);
 
   
-   //²âÊÔ×¨ÓÃ
+   //æµ‹è¯•ä¸“ç”¨
    printf("A = %s,  B = %u\n", str, str);
 
-   //²âÊÔ×¨ÓÃ2
+   //æµ‹è¯•ä¸“ç”¨2
    printf("A = %s,  B = %u\n", str, str);
 
-   //dev·ÖÖ§
-   printf("A = %s,  B = %u\n", str, str);
+
 
 
  
-   free(str);                  //ÊÍ·Å¶ÑÇøÄÚ´æ 
+   free(str);                  //é‡Šæ”¾å †åŒºå†…å­˜ 
  
    return(0);
 }
